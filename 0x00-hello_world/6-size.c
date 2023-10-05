@@ -9,7 +9,7 @@
 int main(void)
 {
 	int integer;
-	float floating-point;
+	float floating_point;
 	char character;
 	long long_int;
 	long long longer_int;
