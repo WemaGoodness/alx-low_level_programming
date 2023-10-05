@@ -5,14 +5,8 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void);
-
+int main(void)
 {
-	int;
-	char;
-	float;
-	long;
-	double;
 
 	printf("Size of a char: %d-byte(s)\n", sizeof(char));
 	printf("Size of an int: %d-byte(s)\n", sizeof(int));
