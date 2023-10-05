@@ -8,11 +8,18 @@
 int main(void);
 {
 
-	printf("Size of a char: %d-byte(s)\n", sizeof(char));
-	printf("Size of an int: %d-byte(s)\n", sizeof(int));
-	printf("Size of floating-point: %d-byte(s)\n", sizeof(float));
-	printf("Size of long int: %d-byte(S)\n", sizeof(long int))
-	printf("Size of long long int: %d-byte(s)\n", sizeof(long long int));
-	printf("Size of double: %d-byte(s)\n", sizeof(double));
+	char character;
+	int integer;
+	long long_int;
+	long long longer_int
+	float floating_point;
+	double double_num;
+
+	printf("Size of a char: %d-byte(s)\n", sizeof(character));
+	printf("Size of an int: %d-byte(s)\n", sizeof(integer));
+	printf("Size of floating-point: %d-byte(s)\n", sizeof(floating_point));
+	printf("Size of long int: %d-byte(S)\n", sizeof(long_int));
+	printf("Size of long long int: %d-byte(s)\n", sizeof(longer_int));
+	printf("Size of double: %d-byte(s)\n", sizeof(double_num));
 	return (0);
 }
