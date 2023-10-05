@@ -5,14 +5,14 @@
  *
  * Return: Always 0 (Success)
  */
+
 int main(void);
 {
-
-	char character;
 	int integer;
+	float floating-point;
+	char character;
 	long long_int;
-	long long longer_int
-	float floating_point;
+	long long longer_int;
 	double double_num;
 
 	printf("Size of a char: %d-byte(s)\n", sizeof(character));
