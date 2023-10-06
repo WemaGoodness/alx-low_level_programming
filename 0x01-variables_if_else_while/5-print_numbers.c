@@ -11,7 +11,7 @@ int main(void)
 
 	for (singled = '0'; singled <= '9'; singled++)
 	{
-		printf(singled "\n");
+		printf("%d \n",singled);
 	}
 
 	return (0);
