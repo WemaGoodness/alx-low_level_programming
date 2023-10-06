@@ -1,9 +1,7 @@
 #include <stdio.h>
 
-/*
- * main
- *
- * Displays lower alphabet characters
+/**
+ * main - Prints lowercase alphabet
  *
  * Return: Always (Success)
  *
