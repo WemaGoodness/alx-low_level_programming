@@ -12,8 +12,8 @@ int main(void)
 	for (singled = '0'; singled <= '9'; singled++)
 	{
 		putchar(singled);
-		printf("\n");
 	}
+	printf("\n")
 
 	return (0);
 }
