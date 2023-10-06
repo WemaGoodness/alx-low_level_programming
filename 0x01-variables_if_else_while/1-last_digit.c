@@ -2,13 +2,11 @@
 #include <time.h>
 #include <stdio.h>
 
-/*
- * main
+/**
+ * main - Checks if last digit of n is: > 5, 6 <, or = 0
  *
- * Determines whether the last digit of a number 
- * is greater than 5, equal to or not equal to 0, or less than 6.
+ * Return: Always (Success)
  *
- * return: always (success)
  */
 int main(void)
 {
