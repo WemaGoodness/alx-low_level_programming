@@ -5,7 +5,7 @@
 /*
  * main
  *
- * Description: Determines whether a number is zero(0), positive(+), or negative(-)
+ * Description: 'Determines whether n is 0, positive(+), or negative(-)'
  *
  * Return: Always (Success)
  */
