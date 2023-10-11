@@ -39,7 +39,7 @@ int main(void)
 		if (count != 98)
 		{
 			printf(", ");
-		}	
+		}
 		fh1 = ih1;
 		fh2 = ih2;
 		ih1 = h1;
