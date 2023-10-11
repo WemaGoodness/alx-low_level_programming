@@ -7,7 +7,7 @@
  */
 void print_fib(int n)
 {
-	unsigned long f = 0, i = 1, b;
+	int f = 0, i = 1, b;
 
 	if (n < 1)
 	{
@@ -17,8 +17,10 @@ void print_fib(int n)
 	printf("%lu ", f);
 	for (b = 1; b < n; b++) 
 	{
+		int next;
+
 		printf("%lu ", i);
-		int next = f + i;
+		next = f + i;
 		f = i;
 		i = next;
 	}
