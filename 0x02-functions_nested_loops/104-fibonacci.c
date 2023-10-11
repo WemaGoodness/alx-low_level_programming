@@ -1,33 +1,55 @@
 #include <stdio.h>
 
 /**
- * print_fib - function to print fibonacci numbers
- * @n: number to be checked
- *
- * Return: fibonnacci sequence
- */
-void print_fib(unsigned long n)
-{
-	unsigned long f = 0, i = 1, b;
-
-	for (b = 1; b < n; b++)
-	{
-		unsigned long next;
-
-		printf("%lu, ", i);
-		next = f + i;
-		f = i;
-		i = next;
-	}
-}
-
-/**
   * main - Prints the first 98 fibonacci numbers
   *
   * Return: void
   */
 int main(void)
 {
-	print_fib(98);
+	int count
+	unsigned long f = 0, i = 1, b;
+	unsigned long h1, h2, fh1, ih1, fh2, ih2;
+
+	fh1 = f / 10000000000;
+        ih1 = i / 10000000000;
+        fh2 = f % 10000000000;
+        ih2 = i % 10000000000;
+	h1 = fh1 + ih1;
+	h2 = fh2 + ih2;
+
+	for (count = 0; count < 92; count++)
+	{
+		unsigned long next;
+
+		next = f + i;
+		printf("%lu, ", next);
+
+		f = i;
+		i = next;
+	}
+
+	for (count = 93; count <99; count++)
+	{
+		if (h2 > 9999999999)
+		{
+			h1 += 1;
+			h2 %= 10000000000;
+		}
+
+		printf("%lu%lu", h1, h2);
+		if (count != 98)
+		{
+			printf(", ");
+		}
+		
+		fh1 = ih1;
+		fh2 = ih2;
+		ih1 = h1;
+		ih2 = h2;
+	}
+	printf("\n");
 	return (0);
+	
 }
+
