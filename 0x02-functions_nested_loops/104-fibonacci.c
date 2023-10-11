@@ -5,7 +5,7 @@
  *
  * Return: fibonnacci sequence
  */
-void print_fib(int n)
+void print_fib(unsigned long n)
 {
 	unsigned long f = 0, i = 1, b;
 
