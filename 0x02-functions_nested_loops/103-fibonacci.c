@@ -10,8 +10,7 @@ int main(void)
 	int f = 0;
 	long i = 1, b = 2, sum = b;
 
-	do
-	{
+	do {
 		b += i;
 
 		if (b % 2 == 0)
