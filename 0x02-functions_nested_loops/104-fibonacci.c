@@ -10,7 +10,7 @@ int main(void)
 	int count;
 	unsigned long f = 0, i = 1, next;
 	unsigned long h1, h2, fh1, ih1, fh2, ih2;
-	
+
 	for (count = 0; count < 92; count++)
 	{
 		next = f + i;
@@ -19,12 +19,11 @@ int main(void)
 		f = i;
 		i = next;
 	}
-
 	fh1 = f / 10000000000;
 	ih1 = i / 10000000000;
 	fh2 = f % 10000000000;
 	ih2 = i % 10000000000;
-	
+
 	for (count = 93; count < 99; count++)
 	{
 		h1 = fh1 + ih1;
@@ -40,8 +39,7 @@ int main(void)
 		if (count != 98)
 		{
 			printf(", ");
-		}
-		
+		}	
 		fh1 = ih1;
 		fh2 = ih2;
 		ih1 = h1;
@@ -49,6 +47,5 @@ int main(void)
 	}
 	printf("\n");
 	return (0);
-	
 }
 
