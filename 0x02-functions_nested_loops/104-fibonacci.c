@@ -7,7 +7,7 @@
   */
 int main(void)
 {
-	int count
+	int count;
 	unsigned long f = 0, i = 1, next;
 	unsigned long h1, h2, fh1, ih1, fh2, ih2;
 	
