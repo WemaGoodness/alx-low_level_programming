@@ -20,7 +20,7 @@ int main(void)
 		i = b - i;
 
 		++f;
-	} while (k + j < 4000000);
+	} while (b + i < 4000000);
 
 	printf("%ld\n", sum);
 	return (0);
