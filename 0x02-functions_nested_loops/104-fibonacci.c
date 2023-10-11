@@ -23,7 +23,8 @@ int main(void)
 		}
 
 		++f;
-	} while (f < 96);
+
+	} while (f < 92);
 
 	printf("\n");
 	return (0);
