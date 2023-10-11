@@ -17,13 +17,3 @@ void print_alphabet(void)
 	_putchar('\n');
 }
 
-/**
- * main - prints the alphabet, in lowercase, followed by a new line.
- *
- * Return: Alaways 0.
- */
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
