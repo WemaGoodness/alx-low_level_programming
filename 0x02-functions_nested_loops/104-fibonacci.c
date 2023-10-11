@@ -10,7 +10,6 @@ void print_fib(unsigned long n)
 {
 	unsigned long f = 0, i = 1, b;
 
-	printf("%lu, ", f);
 	for (b = 1; b < n; b++)
 	{
 		unsigned long next;
