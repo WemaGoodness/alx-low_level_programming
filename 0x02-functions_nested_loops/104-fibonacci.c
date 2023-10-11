@@ -7,8 +7,8 @@
   */
 int main(void)
 {
-	int count
-	unsigned long f = 0, i = 1, b;
+	int count;
+	unsigned long f = 0, i = 1, next;
 	unsigned long h1, h2, fh1, ih1, fh2, ih2;
 
 	fh1 = f / 10000000000;
@@ -20,8 +20,6 @@ int main(void)
 
 	for (count = 0; count < 92; count++)
 	{
-		unsigned long next;
-
 		next = f + i;
 		printf("%lu, ", next);
 
