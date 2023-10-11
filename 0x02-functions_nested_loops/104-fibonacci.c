@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-  * main - Prints the first 52 fibonacci numbers
+  * main - Prints the first 100 fibonacci numbers
   *
   * Return: void
   */
@@ -23,7 +23,7 @@ int main(void)
 		}
 
 		++f;
-	} while (f < 50);
+	} while (f < 98);
 
 	printf("\n");
 	return (0);
