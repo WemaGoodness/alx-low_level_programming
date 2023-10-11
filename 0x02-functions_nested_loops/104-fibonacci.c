@@ -12,9 +12,9 @@ int main(void)
 	unsigned long h1, h2, fh1, ih1, fh2, ih2;
 
 	fh1 = f / 10000000000;
-        ih1 = i / 10000000000;
-        fh2 = f % 10000000000;
-        ih2 = i % 10000000000;
+	ih1 = i / 10000000000;
+	fh2 = f % 10000000000;
+	ih2 = i % 10000000000;
 	h1 = fh1 + ih1;
 	h2 = fh2 + ih2;
 
@@ -27,7 +27,7 @@ int main(void)
 		i = next;
 	}
 
-	for (count = 93; count <99; count++)
+	for (count = 93; count < 99; count++)
 	{
 		if (h2 > 9999999999)
 		{
@@ -40,7 +40,6 @@ int main(void)
 		{
 			printf(", ");
 		}
-		
 		fh1 = ih1;
 		fh2 = ih2;
 		ih1 = h1;
@@ -48,6 +47,4 @@ int main(void)
 	}
 	printf("\n");
 	return (0);
-	
 }
-
