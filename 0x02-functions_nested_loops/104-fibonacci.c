@@ -2,6 +2,7 @@
 
 /**
  * print_fib - function to print fibonacci numbers
+ * @n: number to be checked
  *
  * Return: fibonnacci sequence
  */
@@ -9,17 +10,12 @@ void print_fib(unsigned long n)
 {
 	unsigned long f = 0, i = 1, b;
 
-	if (n < 1)
-	{
-		return;
-	}
-
-	printf("%lu ", f);
-	for (b = 1; b < n; b++) 
+	printf("%lu, ", f);
+	for (b = 1; b < n; b++)
 	{
 		unsigned long next;
 
-		printf("%lu ", i);
+		printf("%lu, ", i);
 		next = f + i;
 		f = i;
 		i = next;
