@@ -3,6 +3,7 @@
 
 /**
  * print_number - prints integer
+ * @n: integer
  *
  * Return: Always (success)
  */
