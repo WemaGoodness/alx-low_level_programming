@@ -14,7 +14,7 @@ void print_number(int n)
 	int s = 1;
 	int d;
 	int p = 1;
-	
+
 	if (n == 0)
 	{
 		_putchar('0');
@@ -25,15 +25,15 @@ void print_number(int n)
 		s = -1;
 		_putchar('-');
 	}
-	
-	while (n / p / 10 != 0)
+
+	while ((n / p / 10) != 0)
 	{
 		p *= 10;
 	}
-	
+
 	while (p > 0)
 	{
-		d = n / p % 10 * s;
+		d = (n / p % 10) * s;
 		_putchar(d + '0');
 		p /= 10;
 	}
