@@ -6,7 +6,7 @@
  *
  * Return: diagonal line
  */
-void print_diagonal(int n);
+void print_diagonal(int n)
 {
 	int bs1, bs2;
 

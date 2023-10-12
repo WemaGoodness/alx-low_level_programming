@@ -5,7 +5,7 @@
  *
  * Return: success
  */
-void more_numbers(void);
+void more_numbers(void)
 {
 	int a, b;
 	
