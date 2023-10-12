@@ -18,6 +18,6 @@ int main(void)
 			p--;
 		}
 	}
-	printf("%lu\n, p");
+	printf("%lu\n", p);
 	return (0);
 }

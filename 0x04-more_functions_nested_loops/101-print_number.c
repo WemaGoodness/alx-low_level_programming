@@ -3,14 +3,17 @@
 
 /**
  * print_number - prints integer
+ * @s: stores sign of n
+ * @d: stores each digit of n
+ * @p: stores the power of 10
  *
  * Return: Always (success)
  */
 void print_number(int n)
 {
-	int sign = 1;
-	int digit;
-	int power = 1;
+	int s = 1;
+	int d;
+	int p = 1;
 	
 	if (n == 0)
 	{
@@ -19,20 +22,20 @@ void print_number(int n)
 	}
 	if (n < 0)
 	{
-		sign = -1;
+		s = -1;
 		_putchar('-');
 	}
 	
-	while (n / power / 10 != 0)
+	while (n / p / 10 != 0)
 	{
-		power *= 10;
+		p *= 10;
 	}
 	
-	while (power > 0)
+	while (p > 0)
 	{
-		digit = n / power % 10 * sign;
-		_putchar(digit + '0');
-		power /= 10;
+		d = n / p % 10 * s;
+		_putchar(d + '0');
+		p /= 10;
 	}
 }
 
