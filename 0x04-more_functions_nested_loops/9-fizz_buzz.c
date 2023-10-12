@@ -3,8 +3,6 @@
 
 /**
  * main - tests for multiples of 3 & 5
- * 	from 1 to 100
- * @n: number to be tested
  *
  * Return: Alaways (success)
  */
