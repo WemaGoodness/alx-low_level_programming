@@ -3,9 +3,6 @@
 
 /**
  * print_number - prints integer
- * @s: stores sign of n
- * @d: stores each digit of n
- * @p: stores the power of 10
  *
  * Return: Always (success)
  */
@@ -18,7 +15,7 @@ void print_number(int n)
 	if (n == 0)
 	{
 		_putchar('0');
-		return (0);
+		return;
 	}
 	if (n < 0)
 	{
