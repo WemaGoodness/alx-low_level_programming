@@ -13,7 +13,7 @@ int main(void)
 	int sum = 0, c = 0;
 	time_t sec;
 
-	srand((unsigned int)time(&sec));
+	srand((unsigned int) time(&sec));
 
 	while (sum < 2772)
 	{
