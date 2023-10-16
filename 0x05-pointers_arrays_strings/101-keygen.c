@@ -10,10 +10,10 @@
  */
 int main(void)
 {
-	int sum = 0;
-	char c;
+	int sum = 0, c = 0;
+	time_t sec;
 
-	srand(time(NULL));
+	srand((unsigned int)time(&sec));
 
 	while (sum < 2772)
 	{
