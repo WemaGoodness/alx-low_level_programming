@@ -19,9 +19,9 @@ void puts_half(char *str)
 	{
 		mid = (length - 1) / 2;
 	}
-	else 
+	else
 	{
-		mid = (length - 1) / 2;
+		mid = ((length / 2) - 1);
 	}
 
 	while (str[mid] != '\0')
