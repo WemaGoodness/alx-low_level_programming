@@ -2,7 +2,7 @@
 
 /**
  * puts2 - prints every other
- * 	character in a string
+ * character in a string
  * @str: string to print
  *
  * Return: Always 0
@@ -16,8 +16,8 @@ void puts2(char *str)
 		if (length % 2 == 0)
 		{
 			_putchar(str[length]);
-			length++;
 		}
+		length++;
 	}
 	_putchar('\n');
 }
