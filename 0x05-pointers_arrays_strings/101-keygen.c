@@ -18,17 +18,17 @@ int main(void)
 	while (sum < 2772)
 	{
 		c = rand() % 128;
-		sum += c;
 
-		if (sum > 2772)
+		if ((sum + c) > 2772)
 		{
 			break;
 		}
+		sum = sum + c;
 		
 		printf("%c", c);
 	}
 	c = 2772 - sum;
 	
-	printf("%c", c);
+	printf("%c\n", c);
 	return (0);
 }
