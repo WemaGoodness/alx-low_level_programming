@@ -25,10 +25,10 @@ int main(void)
 		}
 		sum = sum + c;
 		
-		printf("%c", c);
+		printf("%d", c);
 	}
 	c = 2772 - sum;
 	
-	printf("%c\n", c);
+	printf("%d\n", c);
 	return (0);
 }
