@@ -11,25 +11,23 @@
 int main(void)
 {
 	int sum = 0;
-	char c;
-	time_t sec;
-
-	srand((unsigned int) time(&sec));
-
-	while (sum < 2772)
+	char password[65];
+	int target = 2772;
+	
+	srand((unsigned int)time(NULL));
+	
+	for (int i = 0; i < 64; i++)
 	{
-		c = rand() % 128;
-
-		if ((sum + c) > 2772)
+		password[i] = (rand() % 94) + 33;
+		
+		if (sum + password[i] > target)
 		{
+			password[i] = target - sum;
 			break;
 		}
-		sum = sum + c;
-		
-		printf("%c", c);
+		sum += password[i];
 	}
-	c = 2772 - sum;
-	
-	printf("%c\n", c);
-	return (0);
+	password[64] = '\0';
+	printf("%s\n", password);
+	return 0;
 }
