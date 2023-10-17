@@ -10,13 +10,13 @@
  */
 int main(void)
 {
-	int sum = 0;
+	int i, sum = 0;
 	char password[65];
 	int target = 2772;
 	
 	srand((unsigned int)time(NULL));
 	
-	for (int i = 0; i < 64; i++)
+	for (i = 0; i < 64; i++)
 	{
 		password[i] = (rand() % 94) + 33;
 		
