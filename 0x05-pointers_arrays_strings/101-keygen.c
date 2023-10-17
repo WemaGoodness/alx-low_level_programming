@@ -20,7 +20,7 @@ int main(void)
 	{
 		password[i] = (rand() % 94) + 33;
 		
-		if (sum + password[i] > target)
+		if ((sum + password[i]) > target)
 		{
 			password[i] = target - sum;
 			break;
