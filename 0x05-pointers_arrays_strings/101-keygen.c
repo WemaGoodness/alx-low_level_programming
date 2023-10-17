@@ -10,7 +10,8 @@
  */
 int main(void)
 {
-	int sum = 0, c = 0;
+	int sum = 0;
+	char c;
 	time_t sec;
 
 	srand((unsigned int) time(&sec));
@@ -25,10 +26,10 @@ int main(void)
 		}
 		sum = sum + c;
 		
-		printf("%d", c);
+		printf("%c", c);
 	}
 	c = 2772 - sum;
 	
-	printf("%d\n", c);
+	printf("%c\n", c);
 	return (0);
 }
