@@ -6,21 +6,28 @@
  *
  * Return: Always (Success)
  */
-char *leet(char *n)
+char *leet(char *s)
 {
-	int i, j;
-	char s1[] = "aAeEoOtTlL";
-	char s2[] = "4433007711";
+	int a = 0, b = 0, l = 5;
+	char r[5] = {'A', 'E', 'O', 'T', 'L'};
+	char n[5] = {'4', '3', '0', '7', '1'};
 
-	for (i = 0; n[i] != '\0'; i++)
+	while (s[a])
 	{
-		for (j = 0; j < 10; j++)
+		b = 0;
+
+		while (b < l)
 		{
-			if (n[i] == s1[j])
+			if (s[a] == r[b] || s[a] - 32 == r[b])
 			{
-				n[i] = s2[j];
+				s[a] = n[b];
 			}
+
+			b++;
 		}
+
+		a++;
 	}
-	return (n);
+
+	return (s);
 }
