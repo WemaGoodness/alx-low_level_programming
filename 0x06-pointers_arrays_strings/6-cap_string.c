@@ -7,12 +7,12 @@
  *
  * Return: capitalized string
  */
-char *cap_string(char *s)
+char *cap_string(char *str)
 {
 	const char sch[] = " \t\n,;.!?\"(){}";
 	int i, j, first_char = 1;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (first_char && str[i] >= 'a' && str[i] <= 'z')
 		{
@@ -23,7 +23,7 @@ char *cap_string(char *s)
 
 		for (j = 0; sch[j] != '\0'; j++)
 		{
-			if (str[i] == special_chars[j])
+			if (str[i] == sch[j])
 			{
 				first_char = 1;
 				break;
