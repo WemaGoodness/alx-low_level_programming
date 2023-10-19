@@ -6,29 +6,20 @@
  *
  * Return: encoded string
  */
-char *rot13(char *input)
+char *rot13(char *s)
 {
-	char output;
-	char c, base;
+	int i;
+	char base;
 
-	if (input == NULL)
+	if (s == NULL) return NULL;
+
+	for (i = 0; s[i]; i++)
 	{
-		*output = input;
-		return NULL;
-	}
-
-	while (*input)
-	{
-		c = *input;
-
-		if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		if ((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z'))
 		{
-			base = (c >= 'a') ? 'a' : 'A';
-			*input = base + ((c - base + 13) % 26);
+			base = (s[i] >= 'a') ? 'a' : 'A';
+			s[i] = base + (s[i] - base + 13) % 26;
 		}
-
-		input++;
 	}
-
-	return (output);
+	return (s);
 }
