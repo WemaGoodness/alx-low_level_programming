@@ -11,7 +11,10 @@ char *rot13(char *s)
 	int i;
 	char base;
 
-	if (s == NULL) return NULL;
+	if (s == NULL)
+	{
+		return NULL;
+	}
 
 	for (i = 0; s[i]; i++)
 	{
