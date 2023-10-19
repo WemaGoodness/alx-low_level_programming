@@ -4,21 +4,23 @@
  * string_toupper - changes all
  * lowercase letters to uppercase
  *
- * Return: start
+ * Return: Always (Success)
  */
-char *string_toupper(char *)
+char *string_toupper(char *str)
 {
-	char *start = s;
+	int i;
 
-	while (*s != '\0')
+	if (str == NULL)
 	{
-		if (*s >= 'a' && *s <= 'z')
-		{
-			*s = *s - 32;
-		}
-
-		s++;
+		return NULL;
 	}
 
-	return (start);
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] >= 'a' && str[i] <= 'z')
+		{
+			str[i] -= 32;
+		}
+	}
+	return (str);
 }
