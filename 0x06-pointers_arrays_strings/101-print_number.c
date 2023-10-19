@@ -8,8 +8,8 @@
  */
 void print_number(int n)
 {
-	int reversed = 0;
-        int digit;
+	unsigned int reversed = 0;
+        unsigned int digit;
 
 	if (n < 0)
 	{
