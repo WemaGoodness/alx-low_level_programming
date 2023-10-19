@@ -10,47 +10,71 @@
  * Return: pointer to result
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
-{
-	int len1 = strlen(n1);
-	int len2 = strlen(n2);
 
-	if (len1 + len2 + 1 > size_r)
+{
+	int i = 0, j = 0, k, l = 0, f, s, d = 0;
+
+	while (n1[i] != '\0')
+	{
+		i++;
+	}
+	while (n2[j] != '\0')
+	{
+		j++;
+	}
+	if (i > j)
+	{
+		l = i;
+	}
+	else
+	{
+		l = j;
+	}
+	if (l + 1 > size_r)
 	{
 		return (0);
 	}
 
-	int carry = 0;
-	int i = len1 - 1;
-	int j = len2 - 1;
-	int k = 0;
-	int num1, num2, sum;
-	char temp;
+	r[l] = '\0';
 
-	while (i >= 0 || j >= 0 || carry)
+	for (k = l - 1 ; k >= 0 ; k--)
 	{
-		num1 = (i >= 0) ? n1[i] - '0' : 0;
-		num2 = (j >= 0) ? n2[j] - '0' : 0;
-
-		sum = num1 + num2 + carry;
-		carry = sum / 10;
-		r[k] = (sum % 10) + '0';
-
 		i--;
 		j--;
-		k++;
+		if (i >= 0)
+		{
+			f = n1[i] - '0';
+		}
+		else
+		{
+			f = 0;
+		}
+		if (j >= 0)
+		{
+			s = n2[j] - '0';
+		}
+		else
+		{
+			s = 0;
+		}
+
+		r[k] = (f + s + d) % 10 + '0';
+		d = (f + s + d) / 10;
 	}
 
-	r[k] = '\0';
-
-	int left = 0;
-	int right = k -1;
-	while (left < right)
+	if (d == 1)
 	{
-		temp = r[left];
-		r[left] = r[right];
-		r[right] = temp;
-		left++;
-		right--;
+		r[l + 1] = '\0';
+		if (l + 2 > size_r)
+		{
+			return (0);
+		}
+		while (l-- >= 0)
+		{
+			r[l + 1] = r[l];
+		}
+
+		r[0] = d + '0';
 	}
 	return (r);
 }
