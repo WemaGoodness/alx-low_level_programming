@@ -8,20 +8,19 @@
  */
 char *rot13(char *s)
 {
-	int i;
-	char base;
+	int a = 0;
 
-	if (s == NULL)
+	for (; s[a] != '\0'; a++)
 	{
-		return NULL;
-	}
-
-	for (i = 0; s[i]; i++)
-	{
-		if ((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z'))
+		while ((s[a] >= 'a' && s[a] <= 'z') || (s[a] >= 'A' && s[a] <= 'Z'))
 		{
-			base = (s[i] >= 'a') ? 'a' : 'A';
-			s[i] = base + (s[i] - base + 13) % 26;
+			if ((s[a] > 'm' && s[a] <= 'z') || (s[a] > 'M' && s[a] <= 'Z'))
+			{
+				s[a] -= 13;
+				break;
+			}
+			s[a] += 13;
+			break;
 		}
 	}
 	return (s);
