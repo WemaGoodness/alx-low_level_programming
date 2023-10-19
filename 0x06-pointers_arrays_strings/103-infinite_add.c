@@ -10,7 +10,6 @@
  * Return: pointer to result
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
-
 {
 	int i = 0, j = 0, k, l = 0, f, s, d = 0;
 
@@ -18,10 +17,12 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	{
 		i++;
 	}
+
 	while (n2[j] != '\0')
 	{
 		j++;
 	}
+
 	if (i > j)
 	{
 		l = i;
@@ -30,6 +31,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	{
 		l = j;
 	}
+
 	if (l + 1 > size_r)
 	{
 		return (0);
@@ -49,6 +51,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		{
 			f = 0;
 		}
+
 		if (j >= 0)
 		{
 			s = n2[j] - '0';
@@ -69,6 +72,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		{
 			return (0);
 		}
+
 		while (l-- >= 0)
 		{
 			r[l + 1] = r[l];
