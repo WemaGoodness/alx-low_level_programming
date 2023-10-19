@@ -8,7 +8,7 @@
  */
 char *rot13(char *input)
 {
-	char *output;
+	char output;
 	char c, base;
 
 	if (input == NULL)
