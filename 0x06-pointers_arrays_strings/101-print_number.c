@@ -8,32 +8,20 @@
  */
 void print_number(int n)
 {
-	unsigned int reversed = 0;
-        unsigned int digit;
+	unsigned int reversed;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		n *= -n;
 	}
 
-	while (n > 0)
+	reversed = n;
+
+	if (reversed / 10)
 	{
-		digit = n % 10;
-		reversed = reversed * 10 + digit;
-		n = n / 10;
+		print_number(reversed / 10);
 	}
 
-	if (reversed == 0)
-	{
-		_putchar('0');
-	}
-	else
-	{
-		while (reversed > 0)
-		{
-			_putchar('0' + (reversed % 10));
-			reversed = reversed / 10;
-		}
-	}
+	_putchar('0' + (reversed % 10));
 }
