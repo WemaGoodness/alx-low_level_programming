@@ -18,6 +18,10 @@ char *_strchr(char *s, char c)
 	{
 		s++;
 	}
+	else
+	{
+		return (NULL);
+	}
 
 	return (s);
 }
