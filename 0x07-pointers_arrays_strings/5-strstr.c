@@ -4,6 +4,8 @@
  * _strstr - locates substring
  * @haystack: main string
  * @needle: substring
+ *
+ * Return: Always (0)
  */
 char *_strstr(char *haystack, char *needle)
 {
