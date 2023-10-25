@@ -34,7 +34,7 @@ int _strlen_recursion(char *s)
 		return (0);
 	}
 
-	return (_strlen_recursion(s + 1));
+	return (_strlen_recursion(*s + 1));
 }
 /**
  * is_palindrome - shows if s is a
@@ -52,7 +52,7 @@ int is_palindrome(char *s)
 		return (1);
 	}
 
-	end += _strlen_recursion(s) - 1;
+	end += _strlen_recursioin(s) - 1;
 
 	return (find_lindrome(s, end));
 }
