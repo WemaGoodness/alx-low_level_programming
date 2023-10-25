@@ -22,6 +22,21 @@ int find_lindrome(char *start, char *end)
 }
 
 /**
+ * _strlen - finds length of string
+ * @s: string to measure
+ *
+ * Return: lenght of s
+ */
+int _strlen(char s)
+{
+	if (s == '\0')
+	{
+		return (0);
+	}
+
+	return (_strlen(s + 1));
+}
+/**
  * is_palindrome - shows if s is a
  * palindrome
  * @s: string to check
@@ -37,12 +52,7 @@ int is_palindrome(char *s)
 		return (1);
 	}
 
-	if (*end != '\0')
-	{
-		end++;
-	}
-
-	end--;
+	end += _strlen(s) - 1;
 
 	return (find_lindrome(s, end));
 }
