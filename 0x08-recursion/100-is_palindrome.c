@@ -46,14 +46,12 @@ int _strlen_recursion(char *s)
  */
 int is_palindrome(char *s)
 {
-	char *end = s;
+	int len = _strlen_recursion(s);
 
-	if (*s == '\0')
+	if (len <= 1)
 	{
 		return (1);
 	}
 
-	end += _strlen_recursion(s) - 1;
-
-	return (find_lindrome(s, end));
+	return (find_lindrome(s, s + len - 1));
 }
