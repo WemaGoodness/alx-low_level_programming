@@ -22,7 +22,8 @@ int find_lindrome(char *start, char *end)
 }
 
 /**
- * _strlen - finds length of string
+ * _strlen_recursion - finds length of
+ * string
  * @s: string to measure
  *
  * Return: lenght of s
