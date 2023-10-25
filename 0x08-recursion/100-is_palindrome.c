@@ -7,7 +7,7 @@
  *
  * Return: 1 or 0
  */
-int find_lindrome(char *start, achr *end)
+int find_lindrome(char *start, char *end)
 {
 	if (start >= end)
 	{
