@@ -18,7 +18,8 @@ int get_root(int n, int i)
 		return (i);
 	}
 
-	return (get_root(n, i + 1))
+	return (get_root(n, i + 1));
+}
 /**
  * _sqrt_recursion - finds natural
  * square root of n
@@ -37,5 +38,5 @@ int _sqrt_recursion(int n)
 		return (0);
 	}
 
-	return (get_root(n, 0))
+	return (get_root(n, 0));
 }
