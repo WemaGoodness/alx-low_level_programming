@@ -2,23 +2,25 @@
 
 /**
  * find_lindrome - looks for palindrome
- * @start: beginning of string
- * @end: end of string
+ * @s: string to check
  *
  * Return: 1 or 0
  */
-int find_lindrome(char *start, char *end)
+int find_lindrome(char *s)
 {
-	if (start >= end)
+	int len = _strlen(s) - 1;
+
+	if (*s == s[1])
 	{
-		return (1);
+		s++;
+		len--;
 	}
-	if (*start != *end)
+	else
 	{
 		return (0);
 	}
 
-	return (find_lindrome(start + 1, end - 1));
+	return (1);
 }
 
 /**
@@ -27,14 +29,14 @@ int find_lindrome(char *start, char *end)
  *
  * Return: lenght of s
  */
-int _strlen(char *s)
+int _strlen_recursion(char *s)
 {
 	if (*s == '\0')
 	{
 		return (0);
 	}
 
-	return (_strlen(s + 1));
+	return (_strlen(s) + 1);
 }
 /**
  * is_palindrome - shows if s is a
@@ -45,14 +47,10 @@ int _strlen(char *s)
  */
 int is_palindrome(char *s)
 {
-	char *end = s;
-
 	if (*s == '\0')
 	{
 		return (1);
 	}
 
-	end += _strlen(s) - 1;
-
-	return (find_lindrome(s, end));
+	return (find_lindrome(s));
 }
