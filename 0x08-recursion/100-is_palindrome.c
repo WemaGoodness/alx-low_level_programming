@@ -35,5 +35,5 @@ int is_palindrome(char *s)
 		return (1);
 	}
 
-	return (find_lindrome(start + 1, end - 1));
+	return (find_lindrome(s));
 }
