@@ -27,9 +27,9 @@ int find_lindrome(char *start, char *end)
  *
  * Return: lenght of s
  */
-int _strlen_recursion(char s)
+int _strlen_recursion(char *s)
 {
-	if (s == '\0')
+	if (*s == '\0')
 	{
 		return (0);
 	}
@@ -52,7 +52,7 @@ int is_palindrome(char *s)
 		return (1);
 	}
 
-	end += _strlen_recursion(s) - 1;
+	end += _strlen_recursion(*s) - 1;
 
 	return (find_lindrome(s, end));
 }
