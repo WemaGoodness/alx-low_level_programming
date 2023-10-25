@@ -30,10 +30,19 @@ int find_lindrome(char *start, char *end)
  */
 int is_palindrome(char *s)
 {
+	char *end = s;
+
 	if (*s == '\0')
 	{
 		return (1);
 	}
 
-	return (find_lindrome(s));
+	if (*end != '\0')
+	{
+		end++;
+	}
+
+	end--;
+
+	return (find_lindrome(s, end));
 }
