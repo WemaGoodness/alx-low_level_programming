@@ -52,7 +52,7 @@ int is_palindrome(char *s)
 		return (1);
 	}
 
-	end += _strlen_recursion(*s) - 1;
+	end += _strlen_recursion(s) - 1;
 
 	return (find_lindrome(s, end));
 }
