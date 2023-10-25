@@ -8,7 +8,7 @@
  */
 int find_lindrome(char *s)
 {
-	int len = _strlen(s) - 1;
+	int len = _strlen_recursion(s) - 1;
 
 	if (*s == s[1])
 	{
