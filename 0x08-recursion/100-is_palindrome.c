@@ -36,7 +36,7 @@ int _strlen_recursion(char *s)
 		return (0);
 	}
 
-	return (_strlen(s) + 1);
+	return (_strlen_recursion(s) + 1);
 }
 /**
  * is_palindrome - shows if s is a
