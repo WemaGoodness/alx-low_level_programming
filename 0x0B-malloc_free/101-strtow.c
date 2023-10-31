@@ -92,7 +92,7 @@ char **strtow(char *str)
 	{
 		return (NULL);
 	}
-	while(*str)
+	while (*str)
 	{
 		if (is_space(*str))
 		{
