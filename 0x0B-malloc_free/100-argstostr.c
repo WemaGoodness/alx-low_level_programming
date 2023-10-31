@@ -21,7 +21,7 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 	{
 		arg = av[i];
-		while (arg != '\0')
+		while (*arg != '\0')
 		{
 			tot_len++;
 			arg++;
@@ -33,12 +33,12 @@ char *argstostr(int ac, char **av)
 	result = (char *)malloc((tot_len + 1) * sizeof(char));
 	if (result == NULL)
 	{
-		result (NULL);
+		return (NULL);
 	}
 	for (i = 0; i < ac; i++)
 	{
 		arg = av[i];
-		while (arg != '\0')
+		while (*arg != '\0')
 		{
 			result[pos++] = arg;
 			arg++;
