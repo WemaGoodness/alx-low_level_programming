@@ -80,7 +80,7 @@ char *get_word(char *str)
  */
 char **strtow(char *str)
 {
-	int i, tot_words, word_index = 0;
+	int i, tot_words = 0, word_index = 0;
 	char **words, *word;
 
 	if (str == NULL || *str == '\0')
