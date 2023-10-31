@@ -40,7 +40,7 @@ char *argstostr(int ac, char **av)
 		arg = av[i];
 		while (*arg != '\0')
 		{
-			result[pos++] = arg;
+			result[pos++] = *arg;
 			arg++;
 		}
 		result[pos++] = '\n';
