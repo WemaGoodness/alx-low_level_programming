@@ -2,8 +2,10 @@
 #include <stdlib.h>
 
 /**
- * free_grid - frees 2D freid created
+ * free_grid - frees 2D grid created
  * by alloc_grid
+ * @grid: 2D grid
+ * @height: Vertical side of grid
  *
  * Return: Always a success
  */
