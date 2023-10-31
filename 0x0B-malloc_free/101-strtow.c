@@ -80,20 +80,18 @@ char *get_word(char *str)
  */
 char **strtow(char *str)
 {
-	int i, tot_words = 0, word_index = 0;
+	int i, tot_words = (word_count(str)), word_index = 0;
 	char **words, *word;
 
-	if (str == NULL || *str == '\0')
+	if (tot_words == 0)
 	{
 		return (NULL);
 	}
-
 	words = (char **)malloc(sizeof(char *) * (tot_words + 1));
 	if (!words)
 	{
 		return (NULL);
 	}
-
 	while(*str)
 	{
 		if (is_space(*str))
@@ -114,7 +112,6 @@ char **strtow(char *str)
 			}
 			words[word_index] = word;
 			word_index++;
-
 			while (*str && !is_space(*str))
 			{
 				str++;
