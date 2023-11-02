@@ -86,3 +86,21 @@ void multiply(const char *num1, const char *num2)
 	write(1, "\n", 1);
 	free(result);
 }
+
+/**
+ * main - multiplies two numbers
+ * @argc: argument count
+ * @argv: argument vector
+ *
+ * Return: Always a succeee
+ */
+int main(int argc, const char *argv[]) {
+	if (argc != 3) {
+		write(2, "Error\n", 6);
+		return (98);
+	}
+
+	multiply(argv[1], argv[2]);
+
+	return (0);
+}
