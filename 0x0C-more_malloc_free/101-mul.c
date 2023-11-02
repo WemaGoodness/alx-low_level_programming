@@ -94,8 +94,10 @@ void multiply(const char *num1, const char *num2)
  *
  * Return: Always a succeee
  */
-int main(int argc, const char *argv[]) {
-	if (argc != 3) {
+int main(int argc, const char *argv[])
+{
+	if (argc != 3)
+	{
 		write(2, "Error\n", 6);
 		return (98);
 	}
