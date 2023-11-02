@@ -21,29 +21,31 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		{
 			free(ptr);
 		}
-		return (NULL);
+		return NULL;
 	}
 	if (ptr == NULL)
 	{
-		return (malloc(new_size));
+		return malloc(new_size);
 	}
 	if (new_size == old_size)
 	{
-		return (ptr);
+		return ptr;
 	}
 	new_ptr = malloc(new_size);
 	if (new_ptr == NULL)
 	{
-		return (NULL);
+		return NULL;
 	}
 
 	min = (old_size < new_size) ? old_size : new_size;
 	old_ptr = ptr;
 	new_ptr_char = new_ptr;
+
 	for (i = 0; i < min; i++)
 	{
 		new_ptr_char[i] = old_ptr[i];
 	}
+
 	free(ptr);
-	return (new_ptr);
+	return new_ptr;
 }
