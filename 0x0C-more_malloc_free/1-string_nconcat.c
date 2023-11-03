@@ -7,6 +7,7 @@
  * two strings
  * @s1: first string
  * @s2: second string
+ * @n: characters to remove from s2
  *
  * Return: Always a success
  */
