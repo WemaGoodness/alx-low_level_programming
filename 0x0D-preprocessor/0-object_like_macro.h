@@ -1,5 +1,5 @@
-#ifndef OBJECT_LIKE_MACRO
-#define OBJECT_LIKE_MACRO
+#ifndef SIZE_OF_TOKEN
+#define SIZE_OF_TOKEN
 
 #define SIZE 1024
 
