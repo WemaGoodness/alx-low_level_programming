@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include "3-calc.h"
 
+/**
+ * main - performs simple operations
+ * @argc: argument count
+ * @argv: argument vector
+ *
+ * Return: Always a success
+ */
 int main(int argc, char *argv[])
 {
 	int num1, num2, result;
@@ -20,7 +27,7 @@ int main(int argc, char *argv[])
 
 	func = get_op_func(operator);
 
-	if (!func)
+	if (!func || argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		return (99);
