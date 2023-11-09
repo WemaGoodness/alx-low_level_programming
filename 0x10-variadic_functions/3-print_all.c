@@ -9,41 +9,38 @@
  */
 void print_all(const char * const format, ...)
 {
-	char *separator, str;
 	int i = 0;
+	char c;
+        float f;
+        char *s;
 	va_list args;
 	va_start(args, format);
-	separator = "";
-	while (format && format[i])
+
+	while (format[i] != '\0')
 	{
-		if (format[i] == 'c') {
-			printf("%s%c", separator, va_arg(args, int));
-		} 
-		else if (format[i] == 'i') {
-			printf("%s%d", separator, va_arg(args, int));
-		}
-		else if (format[i] == 'f') {
-			printf("%s%f", separator, (float)va_arg(args, double));
-		}
-		else if (format[i] == 's')
+		if (format[i] == 'c')
 		{
-			str = va_arg(args, char *);
-			if (str == NULL)
-			{
-				printf("%s(nil)", separator);
-			}
-			else
-			{
-				printf("%s%s", separator, str);
+			c = va_arg(args, int);
+			printf("%c", c);
+		}
+		else if (format[i] == 'i')
+		{
+			i = va_arg(args, int);
+			printf("%d", i);
+		} else if (format[i] == 'f') {
+			f = (float) va_arg(args, double);
+			printf("%f", f);
+		} else if (format[i] == 's') {
+			s = va_arg(args, char *);
+			if (s == NULL) {
+				printf("(nil)");
+			} else {
+				printf("%s", s);
 			}
 		}
-		separator = ", ";
 		i++;
-		if (format[i] == '\0')
-		{
-			printf("\n");
-			break;
-		}
 	}
+
 	va_end(args);
+	printf("\n");
 }
