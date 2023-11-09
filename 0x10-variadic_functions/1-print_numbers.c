@@ -7,7 +7,7 @@
  * @separator: separates numbers
  * @n: number
  *
- * Return: 0
+ * Return: Always a success
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
