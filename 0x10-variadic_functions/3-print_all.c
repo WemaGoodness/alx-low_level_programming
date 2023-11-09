@@ -9,35 +9,35 @@
  */
 void print_all(const char * const format, ...)
 {
+	const char *ptr;
 	int i = 0;
-	char c;
-        float f;
-        char *s;
 	va_list args;
 	va_start(args, format);
 
-	while (format[i] != '\0')
+	ptr = format;
+
+	while (*ptr != '\0')
 	{
-		if (format[i] == 'c')
-		{
-			c = va_arg(args, int);
-			printf("%c", c);
-		}
-		else if (format[i] == 'i')
-		{
-			i = va_arg(args, int);
-			printf("%d", i);
-		} else if (format[i] == 'f') {
-			f = (float) va_arg(args, double);
-			printf("%f", f);
-		} else if (format[i] == 's') {
-			s = va_arg(args, char *);
+		if (*ptr == 'c') {
+			printf("%c", va_arg(args, int));
+		} else if (*ptr == 'i') {
+			printf("%d", va_arg(args, int));
+		} else if (*ptr == 'f') {
+			printf("%f", (float)va_arg(args, double));
+		} else if (*ptr == 's') {
+			char *s = va_arg(args, char *);
 			if (s == NULL) {
 				printf("(nil)");
 			} else {
 				printf("%s", s);
 			}
 		}
+
+		if (*(ptr + 1) != '\0' && (i > 0)) {
+			printf(", ");
+		}
+
+		ptr++;
 		i++;
 	}
 
