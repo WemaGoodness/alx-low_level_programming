@@ -7,4 +7,3 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 int str_length(const char *str);
 int is_all_digits(const char *str);
 void multiply(const char *num1, const char *num2);
-int main(int argc, const char *argv[])
