@@ -5,7 +5,7 @@
  * needed to flip to get to the next number
  * in sequence
  * @n: number
- * @index: index
+ * @m: power
  *
  * Return: success
  */
