@@ -9,7 +9,7 @@ def island_perimeter(grid):
     Function to calculate the perimeter of an island in a grid
 
     Parameters:
-    grid (list): list of list of integers where 0 represents 
+    grid (list): list of list of integers where 0 represents
     a water zone and 1 represents a land zone
 
     Returns:
